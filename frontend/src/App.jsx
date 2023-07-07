@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import Services from './components/landing/Services';
 import Navbar from './components/Navbar';
 import InternshipDetails from './components/Internships/InternshipDetails';
+import Accomplishment from './verify/Accomplishment';
+
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/accomplishment' element={<Accomplishment />} />
+
         <Route path='/about' element={<About />} />
         <Route path='/internship' element={<Internship />} />
         <Route path='internship/detail' element={<InternshipDetails />} />
