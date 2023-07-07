@@ -1,10 +1,10 @@
 import React from 'react'
 
-const About = () => {
+const Hero = () => {
   return (
     <div>
-
-      <div className="">
+        
+        <div className="">
         <div className="font-grotesk ">
           <h1 className="font-bold text-5xl">CodeBooter</h1>
           <h1 className="mt-5 text-4xl font-[300]">Hello Booters</h1>
@@ -21,9 +21,7 @@ const About = () => {
         adipiscing elit
       </div>
     </div>
-
-   
   )
 }
 
-export default About
+export default Hero
