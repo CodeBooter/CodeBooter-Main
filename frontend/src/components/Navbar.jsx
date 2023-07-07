@@ -1,18 +1,16 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between alignment-center p-10'>
- <Link to="/">CodeBooter</Link>
-
-<nav>
-    <Link to="/about">About</Link>
-    <Link to="/internship">Internship</Link>
-</nav>
-
-    </div>
-  )
+    <header className='flex justify-between h-10 fixed top-0 left-0 right-0'>
+      <Link to="/">CodeBooter</Link>
+      <nav >
+        <Link to="/about">About</Link>
+        <Link to='/internship'>Internship</Link>
+      </nav>
+</header>
+      )
 }
 
-export default Navbar
+      export default Navbar
