@@ -16,16 +16,17 @@ function App() {
     <div>
 
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/accomplishment' element={<Accomplishment />} />
-
-        <Route path='/about' element={<About />} />
-        <Route path='/internship' element={<Internship />} />
-        <Route path='internship/detail' element={<InternshipDetails />} />
+        <Route path='/' element={<Layout />} >
+          <Route index element={<Home />} />
+          <Route path='/accomplishment' element={<Accomplishment />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/internship' element={<Internship />} />
+          <Route path='internship/detail' element={<InternshipDetails />} />
+          </Route>
       </Routes>
 
-    </div>
-  );
+        </div>
+        );
 }
 
-export default App;
+        export default App;
