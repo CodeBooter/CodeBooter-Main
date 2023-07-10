@@ -10,23 +10,23 @@ function Navbar() {
   const links = [
     {
       id: 1,
-      link: "home",
+      link: "HOME",
     },
     {
       id: 2,
-      link: "about",
+      link: "ABOUT",
     },
     {
       id: 3,
-      link: "services",
+      link: "INTERNSHIPS",
     },
     {
       id: 4,
-      link: "projects",
+      link: "PROJECTS",
     },
     {
       id: 5,
-      link: "contact",
+      link: "CONTACT",
     },
   ];
 
