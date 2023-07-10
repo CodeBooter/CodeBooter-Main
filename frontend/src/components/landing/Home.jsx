@@ -7,7 +7,7 @@ import Contact from '../Contact'
 
 const Home = () => {
   return (
-    <div className='pt-16'>
+    <div className='m-5'>
       <Navbar />
       <Hero />
       <Services />

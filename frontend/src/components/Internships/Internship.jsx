@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Internship = () => {
   return (
-    <div>
+    <div className='mt-20 bg-violet-100'>
     <div className='flex justify-around'>
     <Link to="/detail">Internship</Link>
     <Link>Internship</Link>
