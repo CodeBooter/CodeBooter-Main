@@ -6,7 +6,7 @@ import { BiCheck } from 'react-icons/bi'
 
 const Services = () => {
   return (
-    <div className='h-32'>
+    <div className='my-10 bg-yellow-100'>
       <div className='flex justify-around'>
 
         <div>Services</div>

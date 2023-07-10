@@ -1,77 +1,77 @@
-import React, { useState } from 'react'
-import { Link } from "react-router-dom"
-import { FaBars, FaTimes } from "react-icons/fa";
-import { link } from 'react-scroll'
+import { NavLink, NavNavLink } from "react-router-dom"
+import {motion} from 'framer-motion'
+
+
+let easeing = [0.6, -0.05, 0.01, 0.99];
+
+
 
 function Navbar() {
-
-  const [nav, setNav] = useState(false);
-
-  const links = [
-    {
-      id: 1,
-      link: "HOME",
-    },
-    {
-      id: 2,
-      link: "ABOUT",
-    },
-    {
-      id: 3,
-      link: "INTERNSHIPS",
-    },
-    {
-      id: 4,
-      link: "PROJECTS",
-    },
-    {
-      id: 5,
-      link: "CONTACT",
-    },
-  ];
+  const activeStyles = {
+    fontWeight: "bold",
+    textDecoration: "underline",
+    color: "#FFA8A8"
+  }
 
   return (
-    <div className="flex justify-betwenn items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center fixed top-0 left-0 right-0 text-white bg-white p-4 h-20 mx-20">
       <div>
-        <h1 className="text-5xl font-signature ml-2">CodeBooter</h1>
+      <NavLink to='/' className="text-2xl text-black">
+      <motion.h6
+        whileHover={{scale: 1.1 }}
+        transition={{type: 'spring', stiffness: 300
+        }}>
+        Code<span className="text-main">Booter</span>
+        </motion.h6>
+        </NavLink>
       </div>
 
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer captalize font-medium text-gray-500 hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+      <div className="flex">
+      <NavLink to='/about' className="p-2 text-black"
+      style={({ isActive }) => isActive ? activeStyles : null}>
+        <motion.h6
+        whileHover={{scale: 1.1 }}
+        transition={{type: 'spring', stiffness: 300
+        }}>
+        About
+        </motion.h6>
+        </NavLink>
+      <NavLink to='/internship' className="p-2 text-black"
+      style={({ isActive }) => isActive ? activeStyles : null}>
+      <motion.h6
+        whileHover={{scale: 1.1 }}
+        transition={{type: 'spring', stiffness: 300
+        }}>
+        Internship
+        </motion.h6>
+        </NavLink>
+      <NavLink to='/project' className="p-2 text-black"
+      style={({ isActive }) => isActive ? activeStyles : null}>
+      <motion.h6
+        whileHover={{scale: 1.1 }}
+        transition={{type: 'spring', stiffness: 300
+        }}>
+        Live Projects
+        </motion.h6>
+        </NavLink>
+      <NavLink to='/product' className="p-2 text-black"
+      style={({ isActive }) => isActive ? activeStyles : null}>
+      <motion.h6
+        whileHover={{scale: 1.1 }}
+        transition={{type: 'spring', stiffness: 300
+        }}>
+        Product
+        </motion.h6>
+        </NavLink>
+      <NavLink to='/login'>
+        <motion.button className="text-black border border-2 border-black py-2 px-5 rounded-full"
+         whileHover={{scale: 1.1 }}
+         transition={{type: 'spring', stiffness: 300
+         }}>
+        SIGN IN
+          </motion.button></NavLink>
       </div>
 
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link }) => (
-            <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl"
-            >
-              <Link onClick={() => setNav(!nav)}
-                to={link}
-                smooth
-                duration={500}
-              >
-                {link}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 }
