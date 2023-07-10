@@ -6,7 +6,10 @@ import { BiCheck } from 'react-icons/bi'
 
 const Services = () => {
   return (
-    <div className='my-10 bg-yellow-100'>
+    <motion.div className='my-10 bg-yellow-100'
+    initial={{x:'100vw'}}
+    animate={{x:0}}
+    >
       <div className='flex justify-around'>
 
         <div>Services</div>
@@ -15,7 +18,7 @@ const Services = () => {
 
 
       </div>
-      </div>
+      </motion.div>
 
 
       )
