@@ -10,24 +10,24 @@ function Navbar() {
   const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
-    color: "#FFA8A8"
+    color: "#ff8ba8"
   }
 
   return (
-    <div className="flex justify-between items-center fixed top-0 left-0 right-0 text-white bg-white p-4 h-20 mx-20">
+    <div className="nav flex justify-between items-center fixed top-0 left-0 right-0 p-4 px-8 sh-20">
       <div>
-      <NavLink to='/' className="text-2xl text-black">
+      <NavLink to='/' className="text-2xl nav-text">
       <motion.h6
         whileHover={{scale: 1.1 }}
         transition={{type: 'spring', stiffness: 300
         }}>
-        Code<span className="text-main">Booter</span>
+        <span className="code">Code</span><span className="text-main">Booter</span>
         </motion.h6>
         </NavLink>
       </div>
 
       <div className="flex">
-      <NavLink to='/about' className="p-2 text-black"
+      <NavLink to='/about' className="p-2 nav-text"
       style={({ isActive }) => isActive ? activeStyles : null}>
         <motion.h6
         whileHover={{scale: 1.1 }}
@@ -36,7 +36,7 @@ function Navbar() {
         About
         </motion.h6>
         </NavLink>
-      <NavLink to='/internship' className="p-2 text-black"
+      <NavLink to='/internship' className="p-2 nav-text"
       style={({ isActive }) => isActive ? activeStyles : null}>
       <motion.h6
         whileHover={{scale: 1.1 }}
@@ -45,7 +45,7 @@ function Navbar() {
         Internship
         </motion.h6>
         </NavLink>
-      <NavLink to='/project' className="p-2 text-black"
+      <NavLink to='/project' className="p-2 nav-text"
       style={({ isActive }) => isActive ? activeStyles : null}>
       <motion.h6
         whileHover={{scale: 1.1 }}
@@ -54,7 +54,7 @@ function Navbar() {
         Live Projects
         </motion.h6>
         </NavLink>
-      <NavLink to='/product' className="p-2 text-black"
+      <NavLink to='/product' className="p-2 nav-text"
       style={({ isActive }) => isActive ? activeStyles : null}>
       <motion.h6
         whileHover={{scale: 1.1 }}
@@ -64,7 +64,7 @@ function Navbar() {
         </motion.h6>
         </NavLink>
       <NavLink to='/login'>
-        <motion.button className="text-black border border-2 border-black py-2 px-5 rounded-full"
+        <motion.button className="nav-text border border-2 border-main py-2 px-5 rounded-full"
          whileHover={{scale: 1.1 }}
          transition={{type: 'spring', stiffness: 300
          }}>

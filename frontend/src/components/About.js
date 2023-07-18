@@ -5,7 +5,6 @@ const About = () => {
   return (
     
     <div className='py-10'>
-       <Navbar />
        About
     </div>
   )
