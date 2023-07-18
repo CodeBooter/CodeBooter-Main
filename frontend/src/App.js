@@ -1,13 +1,10 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom"
 import Layout from './components/Layout';
-import Home from "./components/landing/Home.jsx"
-import About from './components/About.jsx';
-import Internship from './components/Internships/Internship';
-import Footer from './components/Footer';
-import Services from './components/landing/Services';
-import Navbar from './components/Navbar';
-import InternshipDetails from './components/Internships/InternshipDetails';
+import Home from "./components/home/Home"
+import About from './components/About';
+import Internship from './components/internships/Internship';
+import InternshipDetails from './components/internships/InternshipDetails';
 import Accomplishment from './verify/Accomplishment';
 
 
